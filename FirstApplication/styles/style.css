@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  font-family: "Caveat", cursive;
+  font-weight: 600;
+}
+
+body {
+  margin: 0;
+  background: url("../image/img.jpg") center/cover no-repeat;
+}
+
+.full_obj {
+  margin: 5em auto;
+  width: 600px;
+  height: 700px;
+  padding: 1em;
+  border: 2px solid black;
+  border-radius: 70px 70px 70px 0px;
+  background: rgb(255, 255, 255, .7);
+}
+
+.obj-title {
+  height: 60px;
+  text-align: center;
+  background: url('../image/title-img.png');
+  background-size: 4em;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.todo {
+  padding: 0.2em;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 15px;
+  margin: 1rem 0;
+}
+
+.todo__inputText {
+  padding: 0.5em;
+  font-size: 1.5rem;
+  border-radius: 40px 40px 0 0;
+}
+
+.todo__btn_container {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 10px;
+  
+}
+
+.todo__btn {
+  font-size: 1.2rem;
+  padding: 0.3em;
+  width: 100%;
+  background-color: bisque;
+  transition: all 2s ease;
+}
+
+#ok {
+  border-radius: 0 0 0 30px;
+}
+
+#ok:hover {
+  background-color: aquamarine;
+}
+
+#clear {
+  border-radius: 0 0 30px 0;
+}
+
+#clear:hover {
+  background-color: palevioletred;
+}
+
+.todo__count {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 1.4rem;
+}
+
+.count__active {
+  width: 100px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: url("../image/active-img.png") center/cover no-repeat;
+}
+
+.count__done {
+  width: 100px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: url("../image/done-img.png") center/cover no-repeat;
+}
+
+.count__number {
+  font-size: 1.8rem;
+}
+
+.todo_item {
+  height: 70px;
+  border: 2px solid black;
+  border-radius: 40px 0 40px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.7em;
+  text-transform: uppercase;
+  margin: 1rem 0;
+}
+
+.item__checkbox {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.item__btn {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  pointer-events: none;
+  opacity: 0.5;
+  color: red;
+  font-size: 1.2rem;
+  border-radius: 50px;
+}
+
+.item__text {
+  font-size: 1.4rem;
+}
+
+.item__checkbox:checked ~ .item__btn {
+  pointer-events: all;
+  opacity: 1;
+  background-color: bisque;
+}
+
+.item__checkbox:checked ~ .item__text {
+  text-decoration: line-through;
+}
