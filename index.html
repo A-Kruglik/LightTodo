@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Caveat&family=Raleway:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script type="module" src="main.js" defer></script>
+  </head>
+  <body>
+    <div class="full_obj">
+      <h1 class="obj-title">Todo List</h1>
+      <div class="todo">
+        <input
+          type="text"
+          class="todo__inputText"
+          placeholder="enter new todo"
+          data-input-add
+        />
+        <div class="todo__btn_container">
+          <button class="todo__btn" id="ok" data-btn-add>OK</button>
+          <button class="todo__btn" id="clear" data-btn-clear>Clear all</button>
+        </div>
+        <div class="todo__count">
+          <div class="count__active">
+            Active:
+            <span class="count__number" data-count-active> 0</span>
+          </div>
+          <div class="count__done">
+            Done:
+            <span class="count__number" data-count-complete> 0</span>
+          </div>
+        </div>
+
+        <div class="todo__container" data-todo-container></div>
+      </div>
+    </div>
+
+    <template data-todo-item-template>
+      <div class="todo_item" data-todo-item>
+        <input type="checkbox" class="item__checkbox" data-item-checkbox />
+        <h4 class="item__text" data-item-text>Выучи наконец</h4>
+        <button class="item__btn" data-item-btn>X</button>
+      </div>
+    </template>
+  </body>
+</html>
